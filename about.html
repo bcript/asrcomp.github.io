@@ -3,156 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - H2 Computing @ ASRJC</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Smoother Carousel with Shadows</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-text">ASRJC Computing</span>
+    <h1>About H2 Computing</h1>
+    <h3>Learn more about our syllabus and the dedicated team behind the programme</h3>
+
+    <h2>Syllabus</h2>
+
+    <hr>
+
+    <div class="carousel-container fade-up-element">
+        <div class="carousel-track-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide current-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-image-section">
+                        <img src="{{ url_for('static', filename='images/slide1.jpg') }}" alt="Slide 1">
+                    </div>
+                    <div class="slide-text-section">
+                        <h2>Slide 1 Title</h2>
+                        <ul class="bullet-list">
+                            <li>Point A</li>
+                            <li>Point B</li>
+                            <li>Point C</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Welcome</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="experience.html" class="nav-link">The Experience</a></li>
-                <li><a href="opportunities.html" class="nav-link">Opportunities</a></li>
-                <li><a href="resources.html" class="nav-link">Learning Resources</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-image-section">
+                        <img src="{{ url_for('static', filename='images/slide2.jpg') }}" alt="Slide 2">
+                    </div>
+                    <div class="slide-text-section">
+                        <h2>Slide 2 Title</h2>
+                        <ul class="bullet-list">
+                            <li>Point 1</li>
+                            <li>Point 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <div class="slide-content-wrapper">
+                    <div class="slide-image-section">
+                        <img src="{{ url_for('static', filename='images/slide3.jpg') }}" alt="Slide 3">
+                    </div>
+                    <div class="slide-text-section">
+                        <h2>Slide 3 Title</h2>
+                        <ul class="bullet-list">
+                            <li>First</li>
+                            <li>Second</li>
+                            <li>Third</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>About H2 Computing</h1>
-            <p>Learn more about our syllabus and the dedicated team behind the programme</p>
+        <div class="carousel-nav">
+            <button class="nav-dot current-dot" data-slide-index="0"></button>
+            <button class="nav-dot" data-slide-index="1"></button>
+            <button class="nav-dot" data-slide-index="2"></button>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="container">
-        <section class="content-section">
-            <h2>The Syllabus</h2>
-            <p>
-                The H2 Computing syllabus is designed by the Singapore Ministry of Education to develop 
-                computational thinking and programming skills. Students will gain a deep understanding of 
-                how computer systems work and how to create elegant solutions to complex problems.
-            </p>
+        <button class="carousel-button prev" id="prevButton">&#10094;</button>
+        <button class="carousel-button next" id="nextButton">&#10095;</button>
+    </div>
 
-            <div class="syllabus-topics">
-                <div class="topic-card">
-                    <h3>Programming Fundamentals</h3>
-                    <ul>
-                        <li>Python programming language</li>
-                        <li>Variables, data types, and operators</li>
-                        <li>Control structures and functions</li>
-                        <li>Object-oriented programming concepts</li>
-                    </ul>
-                </div>
+    <h2>Assessment</h2>
 
-                <div class="topic-card">
-                    <h3>Data Structures & Algorithms</h3>
-                    <ul>
-                        <li>Arrays, lists, stacks, and queues</li>
-                        <li>Sorting and searching algorithms</li>
-                        <li>Algorithm efficiency and complexity</li>
-                        <li>Recursion and dynamic programming</li>
-                    </ul>
-                </div>
+    <hr>
+    
+    <div class="assessment-box fade-up-element">
+        <h3>Exam Requirements</h3>
+        <ul class="requirement-list">
+            <li>Paper 1: Multiple choice and short answer (1.5 hours)</li>
+            <li>Paper 2: Practical programming tasks (2 hours)</li>
+            <li>Paper 3: Case study analysis (1.5 hours)</li>
+            <li>Coursework: Project submission and presentation</li>
+            <li>Minimum 40% required to pass each paper</li>
+        </ul>
+    </div>
 
-                <div class="topic-card">
-                    <h3>System Architecture</h3>
-                    <ul>
-                        <li>Computer organization and architecture</li>
-                        <li>Operating systems fundamentals</li>
-                        <li>Networks and the Internet</li>
-                        <li>Database management systems</li>
-                    </ul>
-                </div>
+    <h2>Teachers</h2>
 
-                <div class="topic-card">
-                    <h3>Software Development</h3>
-                    <ul>
-                        <li>Software development lifecycle</li>
-                        <li>Requirements analysis and design</li>
-                        <li>Testing and debugging strategies</li>
-                        <li>Project management essentials</li>
-                    </ul>
-                </div>
+    <hr>
+
+    <div class="teachers-grid fade-up-element">
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="{{ url_for('static', filename='images/teacher1.jpg') }}" alt="Teacher 1">
             </div>
-        </section>
-
-        <section class="content-section">
-            <h2>Assessment Structure</h2>
-            <div class="assessment-info">
-                <p>
-                    <strong>Paper 1 (40%):</strong> Written examination covering theoretical concepts, 
-                    algorithm design, and problem-solving.
-                </p>
-                <p>
-                    <strong>Paper 2 (30%):</strong> Practical programming examination where students solve 
-                    problems using Python.
-                </p>
-                <p>
-                    <strong>Coursework (30%):</strong> Individual project where students develop a complete 
-                    software application addressing a real-world problem.
-                </p>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h2>Meet Our Teachers</h2>
-            <div class="teachers">
-                <div class="teacher-card">
-                    <div class="teacher-avatar">👨‍🏫</div>
-                    <h3>Mr. Tan Wei Ming</h3>
-                    <p class="teacher-role">Head of Computing Department</p>
-                    <p>
-                        With over 15 years of teaching experience, Mr. Tan is passionate about nurturing 
-                        the next generation of computing professionals. He specializes in algorithms and 
-                        competitive programming.
-                    </p>
-                </div>
-
-                <div class="teacher-card">
-                    <div class="teacher-avatar">👩‍🏫</div>
-                    <h3>Ms. Sarah Lim</h3>
-                    <p class="teacher-role">Computing Teacher</p>
-                    <p>
-                        Ms. Lim brings industry experience from her previous work in software development. 
-                        She focuses on practical applications and software engineering best practices.
-                    </p>
-                </div>
-
-                <div class="teacher-card">
-                    <div class="teacher-avatar">👨‍🏫</div>
-                    <h3>Mr. Raj Kumar</h3>
-                    <p class="teacher-role">Computing Teacher</p>
-                    <p>
-                        Mr. Raj specializes in systems architecture and database design. He encourages 
-                        students to explore emerging technologies and participate in computing competitions.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Anderson Serangoon Junior College. All rights reserved.</p>
-            <p>H2 Computing Department</p>
+            <h3>Mr. Smith</h3>
+            <p class="teacher-role">Lead Computing Instructor</p>
+            <p class="teacher-bio">Specializes in algorithms and data structures with 8 years of teaching experience.</p>
         </div>
-    </footer>
 
-    <script src="js/main.js"></script>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="{{ url_for('static', filename='images/teacher2.jpg') }}" alt="Teacher 2">
+            </div>
+            <h3>Ms. Johnson</h3>
+            <p class="teacher-role">Programming & Web Development</p>
+            <p class="teacher-bio">Expert in Python and web technologies. Passionate about hands-on learning.</p>
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="{{ url_for('static', filename='images/teacher3.jpg') }}" alt="Teacher 3">
+            </div>
+            <h3>Mr. Patel</h3>
+            <p class="teacher-role">Cybersecurity & Networks</p>
+            <p class="teacher-bio">10+ years in IT security. Brings real-world industry experience to the classroom.</p>
+        </div>
+
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="{{ url_for('static', filename='images/teacher4.jpg') }}" alt="Teacher 4">
+            </div>
+            <h3>Dr. Chen</h3>
+            <p class="teacher-role">Database & Systems Design</p>
+            <p class="teacher-bio">PhD in Computer Science. Mentors students through advanced project work.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/syllabus.js') }}"></script>
+    <script>
+        /* Fade-up animation with Intersection Observer */
+        const fadeUpElements = document.querySelectorAll('.fade-up-element');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        fadeUpElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>
